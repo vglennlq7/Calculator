@@ -14,6 +14,7 @@ This is my first Python project, a simple command-line calculator, that performs
    or
    python3 calculator.py
 ## 📍 Example output
+```bash
 ************************************
 ********WELCOME TO THE MOST*********
 *****SIMPLE CALCULATOR ON EARTH*****
@@ -23,7 +24,8 @@ Enter the second number: 10
 Now choose the operation: +, -, *, /
 Your operation: +
 The result is:  2000.0
-That is all 👋😊. 
+That is all 👋😊.
+```
 
 ## 💡 Technologies used
 -  python
