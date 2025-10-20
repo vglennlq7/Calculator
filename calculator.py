@@ -13,7 +13,7 @@ with col1:
 with col2:
     number2 = st.number_input("Enter the second number:", value=0.0, step=1.0, format="%.6f")
 
-operation = st.radio("Choose the operation:", ["+", "-", "*", "/"], horizontal=True)
+operation = st.radio("Choose the operation:", ['+', '-', '*', '/'], horizontal=True)
 
 # ---- Calculate
 result = None
@@ -44,6 +44,7 @@ st.markdown(
     "<div style='text-align:center; opacity:.7;'>Built with Streamlit</div>",
     unsafe_allow_html=True
 )
+
 
 
 
