@@ -3,7 +3,7 @@ import streamlit as st
 st.set_page_config(page_title="Simple Calculator", page_icon="🧮", layout="centered")
 
 # ---- Title
-st.title("🧮 Simple Calculator")
+st.title("🧮 CALCULATOR")
 st.caption("Welcome to the most *simple calculator on Earth* 😄")
 
 # ---- Input
@@ -55,6 +55,7 @@ st.markdown(
     "<div style='text-align:center; opacity:.7;'>Built with Streamlit</div>",
     unsafe_allow_html=True
 )
+
 
 
 
