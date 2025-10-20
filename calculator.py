@@ -19,13 +19,13 @@ operation = st.radio("Choose the operation:", ["+", "-", "*", "/"], horizontal=T
 result = None
 error_msg = None
 if st.button("Calculate"):
-    if operation == "➕":
+    if operation == "+":
         result = number1 + number2
-    elif operation == "➖":
+    elif operation == "-":
         result = number1 - number2
-    elif operation == "✖":
+    elif operation == "*":
         result = number1 * number2
-    elif operation == "➗":
+    elif operation == "/":
         if number2 == 0:
             error_msg = "⚠️ Error: cannot divide by zero."
         else:
@@ -44,5 +44,6 @@ st.markdown(
     "<div style='text-align:center; opacity:.7;'>Built with Streamlit</div>",
     unsafe_allow_html=True
 )
+
 
 
