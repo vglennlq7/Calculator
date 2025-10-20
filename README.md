@@ -16,7 +16,7 @@ This is my first Python project, a simple calculator, that performs division, mu
    python3 calculator.py
 
    
-## 📍 Example output in your "terminal"
+## 📍 Example output before using Streamlit framework
 ```bash
 ************************************
 ********WELCOME TO THE MOST*********
