@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Simple Calculator", page_icon="🧮", layout="centered")
 
-# ---- Title 
+# ---- Title
 st.title("🧮 Simple Calculator")
 st.caption("Welcome to the most *simple calculator on Earth* 😄")
 
@@ -13,7 +13,24 @@ with col1:
 with col2:
     number2 = st.number_input("Enter the second number:", value=0.0, step=1.0, format="%.6f")
 
-operation = st.radio("Choose the operation:", ['+', '-', '*', '/'], horizontal=True)
+# ---- THE FIX IS HERE ----
+# We define a dictionary to map the symbols to user-friendly names.
+operation_options = {
+    "+": "Addition (+)",
+    "-": "Subtraction (-)",
+    "*": "Multiplication (*)",
+    "/": "Division (/)"
+}
+
+# We pass this dictionary's .get method to format_func.
+# Streamlit will use the dictionary to look up the display name for each option.
+# The underlying value will still be "+", "-", "*", or "/".
+operation = st.radio(
+    "Choose the operation:",
+    options=list(operation_options.keys()),  # The actual values are still the symbols
+    format_func=operation_options.get,       # This function formats how they are displayed
+    horizontal=True
+)
 
 # ---- Calculate
 result = None
@@ -34,7 +51,7 @@ if st.button("Calculate"):
     # ---- Output
     if error_msg:
         st.error(error_msg)
-    else:
+    elif result is not None:
         st.success(f"**The result is:** {result}")
         st.caption("That is all 🔥😄")
 
@@ -44,7 +61,6 @@ st.markdown(
     "<div style='text-align:center; opacity:.7;'>Built with Streamlit</div>",
     unsafe_allow_html=True
 )
-
 
 
 
