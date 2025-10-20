@@ -16,15 +16,13 @@ with col2:
 # ---- THE FIX IS HERE ----
 # We define a dictionary to map the symbols to user-friendly names.
 operation_options = {
-    "+": "Addition (+)",
-    "-": "Subtraction (-)",
-    "*": "Multiplication (*)",
-    "/": "Division (/)"
+    "+": "➕Addition",
+    "-": "➖Subtraction",
+    "*": "✖ Multiplication",
+    "/": "➗Division"
 }
 
-# We pass this dictionary's .get method to format_func.
-# Streamlit will use the dictionary to look up the display name for each option.
-# The underlying value will still be "+", "-", "*", or "/".
+
 operation = st.radio(
     "Choose the operation:",
     options=list(operation_options.keys()),  # The actual values are still the symbols
@@ -32,7 +30,7 @@ operation = st.radio(
     horizontal=True
 )
 
-# ---- Calculate
+# ---- Calculator
 result = None
 error_msg = None
 if st.button("Calculate"):
@@ -48,19 +46,20 @@ if st.button("Calculate"):
         else:
             result = number1 / number2
 
-    # ---- Output
+    
     if error_msg:
         st.error(error_msg)
     elif result is not None:
         st.success(f"**The result is:** {result}")
         st.caption("That is all 🔥😄")
 
-# ---- Optional: small footer
+
 st.write("---")
 st.markdown(
     "<div style='text-align:center; opacity:.7;'>Built with Streamlit</div>",
     unsafe_allow_html=True
 )
+
 
 
 
