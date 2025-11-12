@@ -1,5 +1,5 @@
 # Simple Calculator 👍
-This is my first Python project, a simple calculator, that performs division, multiplication, subtraction and adition.
+This is a Python project, a simple calculator, that performs division, multiplication, subtraction and adition.
 
 ## 📗 Features
 -   Performs basic arithmetic operations: addition (+), subtraction (-), multiplication (*), and division (/).
